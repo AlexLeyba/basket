@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+    <div class="container">
+        <form method="post">{% csrf_token %}
+            <p><strong>Вы действительно хотите удалить продукт "{{ object.item }}"?</strong></p>
+            <input class="btn btn-danger" type="submit" value="Удалить">
+        </form>
+    </div>
+{% endblock %}

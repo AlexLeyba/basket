@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+    <div class="container">
+        <table class="table">
+            <tr>
+                <td class="text-center"><strong>Категории:</strong></td>
+            </tr>
+            {% for object in object_list %}
+                <tr>
+                    <td class="text-center">{{ object }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="container">
+        <div class="row">
+            <a href="{% url 'addcategory' %}">
+                <button class="btn btn-primary">Создать свою категорию</button>
+            </a>
+        </div>
+    </div>
+{% endblock %}
